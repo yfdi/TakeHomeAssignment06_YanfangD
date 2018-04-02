@@ -11,9 +11,9 @@ public class SecondActivity extends AppCompatActivity {
     //you'll need a variable to display text
     TextView displayText;
 
-    double baseCost;
-    double taxPercent;
-    double tipPercent;
+//  double baseCost;
+//  double taxPercent;
+//  double tipPercent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,12 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = getIntent();
         TipCalculator tCalculator = (TipCalculator) intent.getSerializableExtra(Keys.TIP_CALCULATOR);
 
-        baseCost = tCalculator.getBaseCost();
-        taxPercent = tCalculator.getTaxPercent();
-        tipPercent = tCalculator.getTipPercent();
         displayText.setText(tCalculator.toString());
+
+
+//      baseCost = tCalculator.getBaseCost();
+//      taxPercent = tCalculator.getTaxPercent();
+//      tipPercent = tCalculator.getTipPercent();
+
     }
 }

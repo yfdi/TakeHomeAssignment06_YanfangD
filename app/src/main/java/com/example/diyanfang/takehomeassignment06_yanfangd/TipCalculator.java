@@ -1,10 +1,12 @@
 package com.example.diyanfang.takehomeassignment06_yanfangd;
 
+import java.io.Serializable;
+
 /**
  * Created by diyanfang on 4/1/18.
  */
 
-public class TipCalculator {
+public class TipCalculator implements Serializable {
 
     private double baseCost;
     private double tipPercent;
