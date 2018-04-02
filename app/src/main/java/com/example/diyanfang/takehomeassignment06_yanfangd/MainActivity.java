@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     TextView taxPercentText;
     TextView tipPercentText;
 
+    double baseCost;
+    double taxPercent;
+    double tipPercent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void submit(View view){
 
-        double baseCost = Double.parseDouble(baseCostText.getText().toString());
-        double taxPercent = Double.parseDouble(taxPercentText.getText().toString());
-        double tipPercent = Double.parseDouble(tipPercentText.getText().toString());
+        baseCost = Double.parseDouble(baseCostText.getText().toString());
+        taxPercent = Double.parseDouble(taxPercentText.getText().toString());
+        tipPercent = Double.parseDouble(tipPercentText.getText().toString());
 
         //then create an object with constructor that accepts everything
-        //and pass that to the second activity
+        //and pass it to the second activity
         TipCalculator tipCalculator = new TipCalculator(baseCost,taxPercent, tipPercent);
 
         Intent intent = new Intent(this, SecondActivity.class);
